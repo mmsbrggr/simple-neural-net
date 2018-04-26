@@ -49,7 +49,9 @@ class NeuralNet:
         return self.output_layer.get_outputs()
 
     # Trains the network via the backpropagation algorithm
-    def train(self, inputs, targets):
+    def train(self, inputs, target_label):
+        targets = np.zeros(len(self.labels))
+        targets[self.labels.index(target_label)] = 1
         outputs = self.feed_forward(np.array(inputs))
         errors = self.get_errors(outputs, np.array(targets))
         self.output_layer.back_propagate(errors)
