@@ -1,3 +1,4 @@
+import numpy as np
 from Layer import Layer
 
 
@@ -8,9 +9,9 @@ class HiddenLayer(Layer):
         self.last_outputs = self.activation(self.last_inputs)
         self.output_connection.feed_forward(self.last_outputs)
 
-    # ReLU activation function
+    # logistic activation function for output layer
     def activation(self, x):
-        return x * (x > 0)
+        return 1 / (1 + np.exp(-x))
 
     def dactivation(self, x):
-        return 1 * (x >= 0)
+        return self.activation(x) * (1 - self.activation(x))
