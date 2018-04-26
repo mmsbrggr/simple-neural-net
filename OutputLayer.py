@@ -11,6 +11,7 @@ class OutputLayer(Layer):
     def get_outputs(self):
         return self.last_outputs
 
+    # logistic activation function for output layer
     def activation(self, x):
         return 1 / (1 + np.exp(-x))
 
