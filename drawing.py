@@ -1,44 +1,3 @@
-from mnist import MNIST
-from NeuralNet import NeuralNet
-import numpy as np
-import random
-
-nn = NeuralNet(784, [128, 64], 10, labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-
-mndata = MNIST('./mnist-data')
-mndata.gz = True
-
-print("Learning phase:")
-images, labels = mndata.load_training()
-for i in range(0, len(images) - 1):
-    image = np.divide(images[i], 255)
-    label = labels[i]
-    nn.train(image, label)
-    if i % 1000 is 0:
-        print(i, "examples trained")
-print("\n\n")
-
-
-print("Testing phase:")
-images, labels = mndata.load_testing()
-correct = 0
-for i in range(0, len(images) - 1):
-    image = np.divide(images[i], 255)
-    label = labels[i]
-    prediction = nn.predict(image)
-    if prediction == label:
-        correct += 1
-    if i % 1000 is 0:
-        print(i, "examples tested")
-
-print(correct, "tests predicted correctly")
-
-
-
-
-
-
-
 from tkinter import *
 from PIL import Image, ImageDraw
 
@@ -62,8 +21,7 @@ def clear_canvas():
 def predict_digit():
     print("Predict digit")
     small_image = image.resize((28, 28))
-    image_array = np.asarray(np.asmatrix(small_image).flatten())[0]
-    print(nn.predict(image_array / 255))
+    small_image.show()
 
 
 master = Tk()
@@ -87,4 +45,3 @@ image = Image.new("L", (canvas_width, canvas_height))
 draw = ImageDraw.Draw(image)
 
 mainloop()
-
