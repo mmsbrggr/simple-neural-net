@@ -50,7 +50,7 @@ from simple_deep_learning.NeuralNet import NeuralNet
 nn = NeuralNet(100, [50, 25], 3, ["Sell stock", "Hold stock", "Buy stock"])
 
 # This should be done not only once but with a lot of data
-nn.train(stock_data, correct_response)
+nn.train(stock_data, correct_action)
 
 # After training we can give it unkown data
 nn.predict(new_stock_data)
