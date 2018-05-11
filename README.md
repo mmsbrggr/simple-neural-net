@@ -22,6 +22,7 @@ algorithms for educational purposes.
 
 The main requirement is python 3. For using the neural net class the following packages are needed:
 * numpy
+
 For running the examples the following packages are needed:
 * PIL (or Pillow)
 * opencv
