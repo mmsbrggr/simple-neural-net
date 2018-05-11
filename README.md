@@ -29,10 +29,32 @@ For running the examples the following packages are needed:
 * python-mnist
 * scipy
 
-To run the handwritten digit examples (mnist_example.py and drawing_fun_example.py) please download the MNIST data set
+To run the handwritten digit examples (`mnist_example.py` and `drawing_fun_example.py`) please download the MNIST data set
 from [yann.lecun.com/exdb/mnist](http://yann.lecun.com/exdb/mnist/) and place the files into a folder named `mnist-data` on the top level of the folder.
 
 ## Usage
+
+The examples can be simply executed by running the corresponding python file:
+
+```shell
+python3 xor_example.py
+python3 mnist_example.py
+python3 drawing_fun_example.py
+```
+
+Creating, using and training a neural net with arbitrary hidden layers and neurons is really simple:
+```python
+from simple_deep_learning.NeuralNet import NeuralNet
+
+# (Input(3 neurons) -> Hidden(4 neurons) -> Hidden(4 neurons) -> Output(3 neurons))
+nn = NeuralNet(100, [50, 25], 3, ["Sell stock", "Hold stock", "Buy stock"])
+
+# This should be done not only once but with a lot of data
+nn.train(stock_data, correct_response)
+
+# After training we can give it unkown data
+nn.predict(new_stock_data)
+```
 
 ## Licence
 This project is licensed under the terms of the MIT license. See the LICENSE file.
