@@ -18,9 +18,18 @@ The implementation is of course not able to compete with cutting edge neural net
 The project was a result of the author trying to better understand neural networks and implementing the basic
 algorithms for educational purposes.
 
-## Requirements
+## Installation
+
 The main requirement is python 3. For using the neural net class the following packages are needed:
 * numpy
+For running the examples the following packages are needed:
+* PIL (or Pillow)
+* opencv
+* python-mnist
+* scipy
+
+To run the handwritten digit examples (mnist_example.py and drawing_fun_example.py) please download the MNIST data set
+from [yann.lecun.com/exdb/mnist](http://yann.lecun.com/exdb/mnist/) and place the files into a folder named `mnist-data` on the top level of the folder.
 
 ## Usage
 
