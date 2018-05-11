@@ -1,3 +1,9 @@
+"""
+    This file is part of a simple toy neural network library.
+
+    Author: Marcel Moosbrugger
+"""
+
 import numpy as np
 
 

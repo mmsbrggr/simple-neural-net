@@ -1,5 +1,10 @@
-import numpy as np
-from Layer import Layer
+"""
+    This file is part of a simple toy neural network library.
+
+    Author: Marcel Moosbrugger
+"""
+
+from simple_deep_learning.Layer import Layer
 
 
 class HiddenLayer(Layer):

@@ -1,5 +1,11 @@
+"""
+    This file is part of a simple toy neural network library.
+
+    Author: Marcel Moosbrugger
+"""
+
 import numpy as np
-from Config import Config
+from simple_deep_learning.Config import Config
 
 
 # Represents a connection between to

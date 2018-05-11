@@ -1,5 +1,11 @@
+"""
+    This file is part of a simple toy neural network library.
+
+    Author: Marcel Moosbrugger
+"""
+
 import numpy as np
-from Layer import Layer
+from simple_deep_learning.Layer import Layer
 
 
 class OutputLayer(Layer):

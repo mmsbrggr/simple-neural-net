@@ -1,8 +1,14 @@
+"""
+    This file is part of a simple toy neural network library.
+
+    Author: Marcel Moosbrugger
+"""
+
 import numpy as np
-from InputLayer import InputLayer
-from HiddenLayer import HiddenLayer
-from OutputLayer import OutputLayer
-from Connection import Connection
+from simple_deep_learning.InputLayer import InputLayer
+from simple_deep_learning.HiddenLayer import HiddenLayer
+from simple_deep_learning.OutputLayer import OutputLayer
+from simple_deep_learning.Connection import Connection
 
 
 # The actual Neural Net which constructs
