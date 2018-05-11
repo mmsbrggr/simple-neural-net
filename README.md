@@ -5,7 +5,7 @@
 -------
 <p align="center">
     <a href="#motivation">Motivation</a> &bull;
-    <a href="#installation">Installation</a> &bull;
+    <a href="#requirements">Requirements</a> &bull;
     <a href="#installation">Usage</a> &bull;
 </p>
 
@@ -18,7 +18,9 @@ The implementation is of course not able to compete with cutting edge neural net
 The project was a result of the author trying to better understand neural networks and implementing the basic
 algorithms for educational purposes.
 
-## Installation
+## Requirements
+The main requirement is python 3. For using the neural net class the following packages are needed:
+* numpy
 
 ## Usage
 
